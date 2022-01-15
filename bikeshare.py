@@ -12,7 +12,7 @@ import pickle
 
 st.title("BikeShare Gradient Booster Model")
 
-url = "https://raw.githubusercontent.com/JonathanBechtel/dat-11-15/main/Homework/Unit2/data/bikeshare.csv"
+url = "https://raw.githubusercontent.com/Lily11226/streamlit_HW3/main/bikeshare.csv"
 
 num_rows = st.sidebar.number_input('Select Number of Rows to Load',
                                    min_value = 1000,
@@ -86,5 +86,5 @@ else:
     sample = pd.DataFrame(sample, index =[0])
     prediction = model.predict(sample)[0]
 
-    st.title(f'Predicted attendance: {int(prediction)}')
+    st.title(f'Predicted bikeshare count: {int(prediction)}')
     #make sure to include "f" before a string
